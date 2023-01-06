@@ -16,9 +16,8 @@
           "https://api.giphy.com/v1/gifs/translate?api_key=YvoQbpCUoJR805aNj9d7PZJNM7lw6sTz&s=cats",
           { mode: "cors" }
         );
-        response.json().then(function (response) {
-          img.src = response.data.images.original.url;
-        });
+        const catData = await response.json();
+        img.src = catData.data.images.original.url;
       }
     </script>
   </body>
